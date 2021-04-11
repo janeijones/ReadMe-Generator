@@ -25,7 +25,7 @@ inquirer.
         })
     })
 
-    console.log('get money')
+
 
 
 
