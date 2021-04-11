@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Require packages for application fs, inquirer 
 const fs = require('fs')
-const inquirer = require("inquirer")
+const inquirer = require('inquirer')
 
-// TODO: Create an array of questions for user input
-const questions = [ //do this for all 2000000 questions; stack array of objects
+// Array of question objects to be asked for user input
+const questions = [ 
     {
         type: "input",
         message: "Enter the project name:",
@@ -72,7 +72,7 @@ const questions = [ //do this for all 2000000 questions; stack array of objects
     },
 ];
 
-// TODO: Create a function to write README file
+// TODO: C
 inquirer.
     prompt(questions)
     .then((response) => {
@@ -91,8 +91,9 @@ ${response.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 - [Tests](#Tests)
+- [License](#license)
+- [Questions](#quesions)
 
 ## Installation
 ${response.installation}
@@ -109,7 +110,7 @@ ${response.test}
 ## License
 ${response.license}
 
-## Info
+## Questions
 GitHub ID: ${response.githubID}
 Deployed Website: ${response.websiteUrl}
 Email: ${response.email}` //generate the README. 
