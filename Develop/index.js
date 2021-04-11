@@ -35,6 +35,11 @@ const questions = [ //do this for all 2000000 questions; stack array of objects
         name: "credits"
     },
 
+    {
+        type: "input",
+        message: "Enter instructions for testing:",
+        name: "test"
+    },
 
     {
         type: "input",
@@ -50,19 +55,19 @@ const questions = [ //do this for all 2000000 questions; stack array of objects
 
     {
         type: "input",
-        message: "What is your GitHub ID?",
+        message: "Enter GitHub ID:",
         name: "githubId"
     },
 
     {
         type: "input",
-        message: "What is your website URL?",
+        message: "Enter the deployed website url:",
         name: "websiteUrl"
     },
 
     {
         type: "input",
-        message: "What is your email?",
+        message: "Enter email address:",
         name: "email"
     },
 ];
@@ -87,6 +92,7 @@ ${response.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Tests](#Tests)
 
 ## Installation
 ${response.installation}
@@ -97,8 +103,16 @@ ${response.usage}
 ## Credits 
 ${response.credits}
 
+## Tests
+${response.test}
+
 ## License
-${response.license}` //generate the README. 
+${response.license}
+
+## Info
+GitHub ID: ${response.githubID}
+Deployed Website: ${response.websiteUrl}
+Email: ${response.email}` //generate the README. 
 
             , function (error) {
                 if (error) {
