@@ -45,7 +45,7 @@ const questions = [ //do this for all 2000000 questions; stack array of objects
     {
         type: "input",
         message: "Choose badge type:",
-        name: "tile"
+        name: "badge"
     },
 
     {
@@ -77,14 +77,28 @@ inquirer.
         
             `# ${response.title}
 
-## Description
-            ${response.description}
+## Badge: ![License: ${response.license}]
 
-             ## Installation
-             ${response.installation}
+## Description
+${response.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+${response.installation}
             
-            ## Usage
-            ${response.usage}` //generate the README. 
+## Usage
+${response.usage}
+
+## Credits 
+${response.credits}
+
+## License
+${response.license}` //generate the README. 
 
             , function (error) {
                 if (error) {
