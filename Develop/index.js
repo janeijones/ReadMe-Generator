@@ -74,11 +74,17 @@ inquirer.
 
 
         fs.writeFile("README.md",
-
-
+        
             `# ${response.title}
-            ${response.usage}
-            ${response.credits}` //generate the README. 
+
+## Description
+            ${response.description}
+
+             ## Installation
+             ${response.installation}
+            
+            ## Usage
+            ${response.usage}` //generate the README. 
 
             , function (error) {
                 if (error) {
