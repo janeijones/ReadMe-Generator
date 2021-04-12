@@ -140,14 +140,14 @@ ${response.credits}
 ## Tests
 ${response.test}
 
-## License | ${badge}
+## License ${badge}
 <h3> ${licenseName}: </h3>
 ${licenseInfo}
 
 ## Questions
-GitHub ID: ${response.githubId}
-Deployed Website: ${response.websiteUrl}
-Email: ${response.email}` //generate the README. 
+<ul> <li><a href = "https://github.com/${response.githubId}">GitHub Profile </li>
+<li> <a href = "https://${response.websiteUrl}">Visit Deployed Website</li>
+<li>Email: ${response.email} </li>` //generate the README. 
 
         , function (error) {
             if (error) {
