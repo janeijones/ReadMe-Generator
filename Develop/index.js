@@ -3,7 +3,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 
 // Array of question objects to be asked for user input
-const questions = [ 
+const questions = [
     {
         type: "input",
         message: "Enter the project name:",
@@ -43,7 +43,7 @@ const questions = [
 
     {
         type: "list",
-        choices: ['MIT License'],
+        choices: ['MIT'],
         name: "license"
     },
 
@@ -80,23 +80,22 @@ inquirer.
         var a = returnDescription(response.license)
 
         writeToRead(response, a)
-   
+
     })
 
 
-function returnDescription(licenseResponse){
-    if(licenseResponse === 'MIT License'){
-           return " get money" 
+function returnDescription(licenseResponse) {
+    if (licenseResponse === 'MIT License') {
+        return " get money"
     }
 }
 
-function writeToRead(response,g){
+function writeToRead(response, g) {
 
     fs.writeFile("README.md",
-        
-    `# ${response.title}                                                    
 
-## Badge: ![License: ${response.license}]
+        `# ${response.title} [![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://shields.io/)                         
+                       
 
 ## Description
 ${response.description}
@@ -126,15 +125,15 @@ ${response.license}
 ${g}
 
 ## Questions
-GitHub ID: ${response.githubID}
+GitHub ID: ${response.githubId}
 Deployed Website: ${response.websiteUrl}
 Email: ${response.email}` //generate the README. 
 
-    , function (error) {
-        if (error) {
-            console.log(error)
-        }
-    })
+        , function (error) {
+            if (error) {
+                console.log(error)
+            }
+        })
 }
 
 
