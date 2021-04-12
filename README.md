@@ -18,7 +18,7 @@ Command-line input used to generate a README.md file with accompanying license a
     
 ## Usage
 <ol> <li> Use the enter button to answer all questions. Use arrow keys to select the type of license. </li> 
-<li> View the README.md with the updated sections. </li>
+<li> View the README.md with the updated sections. </li></ol>
 
 ## Credits 
 [GitHub Markdown](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
