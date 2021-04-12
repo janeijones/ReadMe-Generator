@@ -24,7 +24,7 @@ Command-line input used to generate a README.md file with accompanying license a
 [GitHub Markdown](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 ## Tests
-<a href = "https://www.youtube.com/watch?v=7OK6BCeojmI">README Generator Test Link </a>\n
+<a href = "https://www.youtube.com/watch?v=7OK6BCeojmI">README Generator Test Link </a>  
 **Test README.md file shown in Develop folder
 
 ## License [![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)
