@@ -2,7 +2,7 @@
                        
 
 ## Description
-Command-line input used to generate a readme with accompanying license and details. 
+Command-line input used to generate a README.md file with accompanying license and details. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,10 +13,12 @@ Command-line input used to generate a readme with accompanying license and detai
 - [Questions](#quesions)
 
 ## Installation
-Use node.js to begin the program, Answer the questions, View the README.md in preview mode
+<ol> <li>Download all files in repository</li>
+<li> Use node.js in terminal to begin the program</li> </ol>
     
 ## Usage
-Answer the questions, View the README.md in preview mode
+<ol> <li> Use the enter button to answer all questions. Use arrow keys to select the type of license. </li> 
+<li> View the README.md with the updated sections. </li>
 
 ## Credits 
 [GitHub Markdown](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
