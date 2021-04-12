@@ -46,13 +46,6 @@ const questions = [
         choices: ['MIT', 'Mozilla'],
         name: "license"
     },
-
-    {
-        type: "input",
-        message: "Choose badge type:",
-        name: "badge"
-    },
-
     {
         type: "input",
         message: "Enter GitHub ID:",
@@ -72,22 +65,14 @@ const questions = [
     },
 ];
 
-// TODO: C
+// inquirer using input from command-line for promise
 inquirer.
     prompt(questions)
     .then((response) => {
-
-        
-        
-
-        writeToRead(response)
-        
+        generateMarkdown(response)
     })
 
-
-
-
-function renderBadge(licenseType) {
+function renderBadge(licenseType) { //function to return badge decal
     if (licenseType === `MIT`) {
         return `[![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)`
     }
@@ -96,10 +81,10 @@ function renderBadge(licenseType) {
     }
 }
 
-function renderLicenseInfo(licenseType) {
+function renderLicenseInfo(licenseType) { //function to return license information
     if (licenseType === `MIT`) {
-       var licenseData = `<ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>`
-            
+        var licenseData = `<ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>`
+
     }
     else if (licenseType === `Mozilla`) {
         licenseData = `<ul> <li> <a href = "https://opensource.org/licenses/MPL-2.0"> Mozilla Public License 2.0 </a></li> <li> This project is licensed under Mozilla</li> </ul>`
@@ -107,14 +92,14 @@ function renderLicenseInfo(licenseType) {
     return licenseData
 }
 
-function writeToRead(response) {
-    var licenseName = response.license
-    var badge = renderBadge(licenseName)
-    var licenseInfo = renderLicenseInfo(licenseName)
+function generateMarkdown(response) { //function called to began markdown creation
+    var licenseName = response.license //type of license saved to variable
+    var badge = renderBadge(licenseName) //badge decal saved to badge variable
+    var licenseInfo = renderLicenseInfo(licenseName) //license data returned from function saved into license info
 
-    fs.writeFile("README.md",
+    fs.writeFile("README.md", //fs.writeFile packaged accepts file name, information to write to file, function to catch error 
 
-`# ${response.title} ${badge}
+        `# ${response.title} ${badge}
                        
 
 ## Description
@@ -157,8 +142,3 @@ ${licenseInfo}
 }
 
 
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
-init();
