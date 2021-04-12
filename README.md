@@ -17,7 +17,7 @@ Command-line input used to generate a README.md file with accompanying license a
 <li> Use node.js in terminal to begin the program</li> </ol>
     
 ## Usage
-<ol> <li> Use the enter button to answer all questions. Use arrow keys to select the type of license. </li> 
+<ol> <li>Use the enter button to submit typed answers to each question. When prompted, use arrow keys to select the type of license. </li> 
 <li> View the README.md with the updated sections. </li></ol>
 
 ## Credits 
