@@ -32,5 +32,4 @@ Testing Video Here:
 
 ## Questions
 <ul> <li><a href = "https://github.com/janeijones">GitHub Profile </li>
-<li> <a href = "https://none">Visit Deployed Website</li>
-<li>Email: janeijones@wow.com </li>
+<li>Email: janeijones@wow.com </li> </ul>
