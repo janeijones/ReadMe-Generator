@@ -42,8 +42,8 @@ const questions = [
     },
 
     {
-        type: "input",
-        message: "Choose license type:",
+        type: "list",
+        choices: ['MIT License'],
         name: "license"
     },
 
@@ -77,10 +77,24 @@ inquirer.
     prompt(questions)
     .then((response) => {
 
+        var a = returnDescription(response.license)
 
-        fs.writeFile("README.md",
+        writeToRead(response, a)
+   
+    })
+
+
+function returnDescription(licenseResponse){
+    if(licenseResponse === 'MIT License'){
+           return " get money" 
+    }
+}
+
+function writeToRead(response,g){
+
+    fs.writeFile("README.md",
         
-            `# ${response.title}
+    `# ${response.title}                                                    
 
 ## Badge: ![License: ${response.license}]
 
@@ -97,7 +111,7 @@ ${response.description}
 
 ## Installation
 ${response.installation}
-            
+    
 ## Usage
 ${response.usage}
 
@@ -109,21 +123,19 @@ ${response.test}
 
 ## License
 ${response.license}
+${g}
 
 ## Questions
 GitHub ID: ${response.githubID}
 Deployed Website: ${response.websiteUrl}
 Email: ${response.email}` //generate the README. 
 
-            , function (error) {
-                if (error) {
-                    console.log(error)
-                }
-            })
+    , function (error) {
+        if (error) {
+            console.log(error)
+        }
     })
-
-
-
+}
 
 
 // TODO: Create a function to initialize app
