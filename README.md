@@ -32,4 +32,4 @@ Testing Video Here:
 
 ## Questions
 <ul> <li><a href = "https://github.com/janeijones">GitHub Profile </li>
-<li>Email: janeijones@wow.com </li> </ul>
+<li>Email: janeijoness@yahoo.com </li> </ul>
