@@ -77,24 +77,39 @@ inquirer.
     prompt(questions)
     .then((response) => {
 
-        var a = returnDescription(response.license)
+        
+        
 
-        writeToRead(response, a)
-
+        writeToRead(response)
+        
     })
 
 
-function returnDescription(licenseResponse) {
-    if (licenseResponse === 'MIT License') {
-        return " get money"
+
+
+function renderBadge(licenseType) {
+    if (licenseType === `MIT`) {
+        return `[![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://shields.io/)`
     }
 }
 
-function writeToRead(response, g) {
+function renderLicenseInfo(licenseType) {
+    if (licenseType === `MIT`) {
+        var link = `<ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>`
+    
+
+        return link
+    }
+}
+
+function writeToRead(response) {
+    var licenseName = response.license
+    var badge = renderBadge(licenseName)
+    var licenseInfo = renderLicenseInfo(licenseName)
 
     fs.writeFile("README.md",
 
-        `# ${response.title} [![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://shields.io/)                         
+`# ${response.title} ${badge}
                        
 
 ## Description
@@ -120,9 +135,9 @@ ${response.credits}
 ## Tests
 ${response.test}
 
-## License
-${response.license}
-${g}
+## License${badge}
+### ${licenseName}: 
+${licenseInfo}
 
 ## Questions
 GitHub ID: ${response.githubId}
