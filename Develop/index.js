@@ -98,10 +98,9 @@ function generateMarkdown(response) { //function called to began markdown creati
     var licenseInfo = renderLicenseInfo(licenseName) //license data returned from function saved into license info
 
     fs.writeFile("README.md", //fs.writeFile packaged accepts file name, information to write to file, function to catch error 
-
-        `# ${response.title} ${badge}
+//README.md file is written to 
+        `# ${response.title} ${badge} 
                        
-
 ## Description
 ${response.description}
 
@@ -134,9 +133,9 @@ ${licenseInfo}
 <li> <a href = "https://${response.websiteUrl}">Visit Deployed Website</li>
 <li>Email: ${response.email} </li>` //generate the README. 
 
-        , function (error) {
+        ,function (error) { //function to catch error
             if (error) {
-                console.log(error)
+                console.log("There's an error!" + error); 
             }
         })
 }
