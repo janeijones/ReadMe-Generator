@@ -25,12 +25,12 @@ Command-line input used to generate a README.md file with accompanying license a
 
 ## Tests
 <a href = "https://www.youtube.com/watch?v=7OK6BCeojmI">README Generator Test Link </a>
-Test README.md file shown in Develop folder
+**Test README.md file shown in Develop folder
 
 ## License [![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)
 <h3> MIT: </h3>
 <ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>
 
 ## Questions
-<ul> <li><a href = "https://github.com/janeijones">GitHub Profile </li>
+<ul> <li><a href = "https://github.com/janeijones">GitHub Profile</a></li>
 <li>Email: janeijoness@yahoo.com </li> </ul>
