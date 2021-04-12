@@ -43,7 +43,7 @@ const questions = [
 
     {
         type: "list",
-        choices: ['MIT'],
+        choices: ['MIT', 'Mozilla'],
         name: "license"
     },
 
@@ -89,17 +89,22 @@ inquirer.
 
 function renderBadge(licenseType) {
     if (licenseType === `MIT`) {
-        return `[![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://shields.io/)`
+        return `[![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)`
+    }
+    else if (licenseType === `Mozilla`) {
+        return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
     }
 }
 
 function renderLicenseInfo(licenseType) {
     if (licenseType === `MIT`) {
-        var link = `<ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>`
-    
-
-        return link
+       var licenseData = `<ul> <li> <a href = "https://opensource.org/licenses/MIT"> MIT License </a></li> <li> This project is licensed under MIT</li> </ul>`
+            
     }
+    else if (licenseType === `Mozilla`) {
+        licenseData = `<ul> <li> <a href = "https://opensource.org/licenses/MPL-2.0"> Mozilla Public License 2.0 </a></li> <li> This project is licensed under Mozilla</li> </ul>`
+    }
+    return licenseData
 }
 
 function writeToRead(response) {
@@ -135,8 +140,8 @@ ${response.credits}
 ## Tests
 ${response.test}
 
-## License${badge}
-### ${licenseName}: 
+## License | ${badge}
+<h3> ${licenseName}: </h3>
 ${licenseInfo}
 
 ## Questions
